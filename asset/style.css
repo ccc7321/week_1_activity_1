@@ -1,8 +1,19 @@
+/* Universal Selector */
+* {
+    margin:0;
+    padding:0;  
+}
+
 a {
     color:rgb(202, 110, 24);
     text-decoration-line: none;
     font-weight: bold;
 }
+
+
+title {
+    display: none;
+  }
 
 h1,
 h2,
@@ -12,18 +23,50 @@ h3 {
 .display-inline {
     display: inline;
 }
-.header {
+
+header,
+footer {
+    width: 100%;
+    background-color: rgb(44, 95, 78);
+    line-height: 60px;
+    height: 60px;
+}
+
+header {
     position: fixed;
     top: 0;
     right: 0;
     padding: 0px;
-    background-color: rgb(44, 95, 78);
     font-size: 24px;
     word-spacing: 50px;
     border-bottom: 15px solid beige;
-    width: 100%;
-    text-align: right;
+    margin: 20px;
 }
+
+body {
+    position: relative;
+    font-family: "Goudy Bookletter 1911", sans-serif;
+    font-size: 20px;
+    background-color: #FDF8F5;
+    color: #4F4846;
+  }
+
+input {
+    box-sizing: border-box;
+    width: 300px;
+    border: 1px solid #4F4846;
+}
+
+form {
+    /* Center the form on the page, margin: 0 auto is useful for horizontal centering - the object sit centreally within its parent */
+    margin: 0 auto;
+    width: 500px;
+    padding: 10px;
+    /* border-radius rounds the corners of an element's outer border edge */
+    border-radius: 20px;
+    border: 5px solid #DDAF94;
+ 
+  }
 
 .block-1 {
     background-color: cadetblue;
@@ -45,9 +88,19 @@ h3 {
     background-color: cadetblue;
 }
 
-.footer {
-    width: 100%;
-    background-color: rgb(44, 95, 78);
+footer {
+     /* footer's parent is the body, it should be at the bottom  - why does it goes to the bottom with the bottom property */
     position: absolute;
-    bottom: 0px;
+    margin-top: 0;
+    border-bottom: 10px solid #4F4846;
+    color: #b65d2a;    
+    bottom: 0;
+ }
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
